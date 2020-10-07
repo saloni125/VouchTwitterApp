@@ -11,14 +11,14 @@ Install Python and Django.
 ## Clone the repository
 git clone https://github.com/saloni125/VouchTwitterApp
 ## Install the requirements
-cd VouchTwitterApp
+cd VouchTwitterApp <br/>
 python -m pip install -r requirements.txt
 ## Setup Database
-### python manage.py makemigrations
-It is responsible for creating new migrations based on the changes you have made to your models.
+ python manage.py makemigrations
+### It is responsible for creating new migrations based on the changes you have made to your models.
 
-### python manage.py migrate
-Migrate - It is responsible for applying migrations, as well as unapplying and listing their status.
+ python manage.py migrate
+### Migrate - It is responsible for applying migrations, as well as unapplying and listing their status.
 ## Start the Development Server
 python manage.py runserver
 
