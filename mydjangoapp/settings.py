@@ -14,7 +14,7 @@ SECRET_KEY = 'SOljZv4IfVL8S98Qvcwjk4Uuy43TjO2gk7geUjb12MLDvkX078'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','.pythoneverywhere.com']
 LOGIN_REDIRECT_URL = '/path/to/url'
 LOGOUT_REDIRECT_VIEW = 'sign_out'
 LOGOUT_REDIRECT_URL = '/path/to/url'
@@ -121,15 +121,13 @@ prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+
+
+
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
