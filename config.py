@@ -11,6 +11,6 @@ TWEETS_COUNT=10 # Retrieve only 'X' tweets from user's timeline
 TOP_COUNT=10  # Display only top 'X' urls and domains
 
 # Twiiter will callback with tokens here
-CALLBACK_URL='http://toptwee.pythonanywhere.com/callback/'
+CALLBACK_URL='http://17uec104.pythonanywhere.com/callback/'
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/home/'
 SOCIAL_AUTH_LOGIN_URL = '/'
