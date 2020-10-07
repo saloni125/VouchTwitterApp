@@ -15,10 +15,15 @@ cd VouchTwitterApp <br/>
 python -m pip install -r requirements.txt
 ## Setup Database
  python manage.py makemigrations
-### It is responsible for creating new migrations based on the changes you have made to your models.
+#### It is responsible for creating new migrations based on the changes you have made on the models.
 
  python manage.py migrate
-### Migrate - It is responsible for applying migrations, as well as unapplying and listing their status.
+#### It is responsible for applying migrations, as well as unapplying and listing their status.
+
+## Viewing DB Models
+python manage.py createsuperuser <br/>
+Log in 127.0.0.1:8000/admin 
+
 ## Start the Development Server
 python manage.py runserver
 
