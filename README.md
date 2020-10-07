@@ -9,22 +9,22 @@ Actual Tweets containing links and Which user has shared the most links
 Install Python and Django.
 # How to run on your System
 ## Clone the repository
-git clone https://github.com/saloni125/VouchTwitterApp
+>git clone https://github.com/saloni125/VouchTwitterApp
 ## Install the requirements
-cd VouchTwitterApp <br/>
-python -m pip install -r requirements.txt
+> cd VouchTwitterApp <br/>
+> python -m pip install -r requirements.txt
 ## Setup Database
- python manage.py makemigrations
+> python manage.py makemigrations
 #### It is responsible for creating new migrations based on the changes you have made on the models.
 
- python manage.py migrate
+> python manage.py migrate
 #### It is responsible for applying migrations, as well as unapplying and listing their status.
 
 ## Viewing DB Models
-python manage.py createsuperuser <br/>
-Log in 127.0.0.1:8000/admin 
+> python manage.py createsuperuser <br/>
+> Log in 127.0.0.1:8000/admin 
 
 ## Start the Development Server
-python manage.py runserver
+>python manage.py runserver
 
 Open http://127.0.0.1:8000/ 
