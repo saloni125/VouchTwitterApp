@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <table class="ui celled table">
+        <thead>
+            <tr><th> User ID </th>
+                <th> User Handle Name</th>
+                <th> User Name</th>
+                <th>Tweets (With URLs)</th>
+            </tr>
+        </thead>
+            <tbody>
+                {% for tweet in tweets %}
+                <tr>
+                    <td data-label="User ID">{{ tweet.user_id}}</td>
+                    <td data-label="User Handle Name">{{ tweet.user_screen_name}}</td>
+                    <td data-label="User Name">{{ tweet.user_name}}</td>
+                    <td data-label="Tweets (With URLs)">{{ tweet.total}}</td>
+                </tr>
+                {%endfor %}
+            </tbody>
+    </table>
+
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th> Domain Name</th>
+                <th> Times Posted </th>
+            </tr>
+        </thead>
+            <tbody>
+                {% for domain in domains %}
+                <tr>
+                    <td data-label="Domain Name">{{ domain.domain_name}}</td>
+                    <td data-label="Times Posted">{{ domain.total}}</td>
+                </tr>
+                {%endfor %}
+            </tbody>
+    </table>
+
+{% endblock %}

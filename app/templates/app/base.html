@@ -1,0 +1,63 @@
+{% load static %}
+<html>
+    <head>
+        <title>Twitter TopLinks</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.css">
+    </head>
+    <body class="ui container" style="background-color:rgba(155, 100, 58, 0.2);">
+
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT__3nc6s3b2djZRwaf9U24YjgaRo9MN-C7JA&usqp=CAU" alt="TweetLinks" style="width:128px;height:128px;">
+        <h1 class="ui center aligned icon header" style="text-align:center;" style="font-family:verdana;" style="background-color:rgb(255, 99, 71);">
+          <i style="background-color:LightGray;">  Twitter TopLinks </i>
+        </h1>
+        <div class="ui secondary pointing menu">
+          
+        <a href={% url 'top_tweets_list' %} class="item" style="color:DodgerBlue;">
+          Home
+        </a>
+    
+        {% if  request.session.user_id %}
+            <a href={% url 'user_tweets_list' %} class="item" style="color:DodgerBlue;">
+                Tweets
+            </a>
+        {% else %}
+        <div data-tooltip= "Please Sign In !!">
+            <a  class="item" style="color:DodgerBlue;">
+              Tweets
+            </a>
+        </div>
+        {% endif %}
+
+        <div class="right menu">
+            {% if request.session.user_id %}
+                <a href = {% url 'sign_out' %} class="ui item">
+                    <i class="trash icon"></i>
+                    Sign Out
+                </a>
+
+            {% else %}
+                <a href = {% url 'auth' %} class="ui item">
+                <i class="twitter icon"></i>
+                    Login with Twitter
+                </a>
+          {% endif %}
+        </div>
+      </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+        </script>
+        <!-- <script src="semantic/dist/semantic.min.js"></script> -->
+    </body>
+</html>
