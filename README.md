@@ -9,7 +9,7 @@ Actual Tweets containing links and Which user has shared the most links
 Install Python and Django.
 # How to run on your System
 ## Clone the repository
-git clone 
+git clone https://github.com/saloni125/VouchTwitterApp
 ## Install the requirements
 python -m pip install -r requirements.txt
 ## Setup Database
