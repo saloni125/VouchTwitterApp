@@ -1,8 +1,8 @@
 # Assignment
 # Introduction
-The app should let the user login with Twitter.
+The app let's the user login with Twitter.
 Once authenticated, the app pulls just the tweet's that contain URLs from a users stream for the past 7 days
-Once stored, the application should then compute and display
+Once stored, the application then compute and display
 Actual Tweets containing links and Which user has shared the most links
 ,List of Top Domains that have been shared so far.
 # Prerequisites
