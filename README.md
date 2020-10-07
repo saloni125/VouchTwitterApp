@@ -22,7 +22,7 @@ Install Python and Django.
 
 ## Viewing DB Models
 > python manage.py createsuperuser <br/>
-> Log in 127.0.0.1:8000/admin 
+#### Log in 127.0.0.1:8000/admin 
 
 ## Start the Development Server
 >python manage.py runserver
