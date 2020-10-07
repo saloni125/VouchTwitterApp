@@ -11,6 +11,7 @@ Install Python and Django.
 ## Clone the repository
 git clone https://github.com/saloni125/VouchTwitterApp
 ## Install the requirements
+cd VouchTwitterApp
 python -m pip install -r requirements.txt
 ## Setup Database
 ### python manage.py makemigrations
